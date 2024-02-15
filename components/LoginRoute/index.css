@@ -64,3 +64,9 @@
 
 }
 
+@media screen and (max-width: 768px) {
+    .form-container {
+        height: 300px;
+        width: 300px;
+    }
+}

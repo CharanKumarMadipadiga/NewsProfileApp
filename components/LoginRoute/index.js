@@ -1,4 +1,6 @@
 import {Component} from 'react'
+
+import Cookies from 'js-cookie'
 import './index.css'
 
 class LoginRoute extends Component {
@@ -11,7 +13,9 @@ class LoginRoute extends Component {
     }
 
     onSubmitSuccess=(jwtToken)=>{
-        console.log(jwtToken)
+        Cookies.set("jwt_token", jwtToken, {expires: 20})
+        const {history}=this.props
+        history.replace("/")
     }
 
     onSubmitFailure=(error)=>{
@@ -76,6 +80,7 @@ class LoginRoute extends Component {
 
     render() {
         const {username, password, showUserError, showPasswordError, showSubmitError, errorMessage}=this.state 
+        
       
         return (
             <div className='app-container'>
