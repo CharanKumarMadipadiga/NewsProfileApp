@@ -9,11 +9,17 @@ import Data from '../Data.json';
 import './index.css'
 
 
-const ProfilePage=()=> {
+const ProfilePage=(props)=> {
   const { avatar, name, bio} = Data;
   const jwtToken=Cookies.get("jwt_token");
   if(jwtToken===undefined) {
     return <Redirect to="/login"/>
+  }
+
+  const onClickLogout=()=>{
+    Cookies.remove("jwt_token");
+    const {history}=props 
+    history.replace("/login")
   }
 
 
@@ -24,6 +30,7 @@ const ProfilePage=()=> {
                 <img src={avatar} alt="User Avatar" className='avatar' />
                 <h1 className='name'>{name}</h1>
                 <p className='bio'>{bio}</p>
+                <button type="button" className='logout-btn' onClick={onClickLogout}>logout</button>
           </div>
           <div className="tabs">
                 <Link to="/profile/posts" className="post-link">Posts</Link>

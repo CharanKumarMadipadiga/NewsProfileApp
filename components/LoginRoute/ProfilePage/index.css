@@ -102,6 +102,20 @@
     font-size: 20px;
 }
 
+.logout-btn {
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: violet;
+    color: #ffffff;
+    font-family: "Roboto";
+    margin-left: 105px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 768px) {
     .profile-container {
@@ -126,4 +140,7 @@
         padding-left: 20px;
     }
 }
+
+
+
 
