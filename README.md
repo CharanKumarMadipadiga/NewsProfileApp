@@ -1,6 +1,6 @@
 ﻿# NewsProfileApp
-React Router Authentication Example
-This is a  React application demonstrating authentication using React Router.
+
+This is a full-stack React application with backend demonstrating authentication using React Router.
 
 #Installation
 Clone the repository to your local machine:
