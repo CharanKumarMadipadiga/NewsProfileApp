@@ -26,6 +26,7 @@ The application provides the following features:
 username: charan
 password: charan@2024
 
+# components functionality
 Login: Access the application by navigating to /login. (After successful login a JWT Token will be generated for authenticating the user and the token will be stored in chrome browser with name 'jwt_token' in Application/Cookies section. after successful logout the user will be redirected to login page and the JWT Token will be removed from the cookies.)
 
 Profile Page: View and manage user profiles.
